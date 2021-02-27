@@ -1,0 +1,38 @@
+# -------=======-------
+#  Vouchers from stone
+#  By Fiver
+#  /sk reload vouchers
+# -------=======-------
+
+# This is a skript for dropping XP from stone. (You can modify % and amount)
+
+on mine of stone:
+	chance of 40%
+	add 1 xp to player
+    
+# You can add custom amounts of money, and chances to drop by copy-pasting the code.
+    
+on mine of stone:
+	chance of 0.1%:
+		give 1 paper named "&61300$" to player
+	chance of 0.01%:
+		give 1 paper named "&63400$" to player
+	chance of 0.001%:
+		give 1 paper named "&610000$" to player
+        
+on right click:
+	player is holding paper named "&6Voucher na &e1300$"
+	play sound "block.note_block.pling"
+	execute console command "/eco give %player% 1300"
+	remove 1 paper named "&6Voucher na &e1300$" from player
+on right click:
+	player is holding paper named "&6Voucher na &e3400$"
+	play sound "block.note_block.pling"
+	execute console command "/eco give %player% 3400"
+	remove 1 paper named "&6Voucher na &e3400$" from player
+on right click:
+	player is holding paper named "&6Voucher na &e10000$"
+	play sound "block.note_block.pling"
+	execute console command "/eco give %player% 10000"
+	remove 1 paper named "&6Voucher na &e10000$" from player
+    
